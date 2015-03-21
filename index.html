@@ -1,1 +1,171 @@
-default
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medicare Payment Data Web App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Medicare Payment Data Web App">
+  <meta name="author" content="Mark Dakkak">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Medicare Payment Data Web App</h1>
+    <h2>A close look at the Triangle region of North Carolina</h2>
+    <p>Mark Dakkak<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Federal government is taking steps to make healthcare system more transparent and accountable<br></li>
+<li>The Medicare provider utilization and payment data was released in June 2014 at the annual Health Datapalooza conference in Washington D.C.<br></li>
+<li>Contains information on Medicare fee-for-service beneficiaries<br></li>
+<li>Can be accessed <a href="http://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Physician-and-Other-Supplier.html">here</a><br></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Why the triangle region of North Carolina?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>This is where I study healthcare and healthcare policy<br></li>
+<li>There is a major health system in each of the three cities in the triangle:<br>
+
+<ul>
+<li>Duke University Health System in Durham, NC<br></li>
+<li>UNC Health Care in Chapel Hill, NC<br></li>
+<li>WakeMed in Raleigh, NC<br></li>
+</ul></li>
+<li>Duke and UNC compete fiercely over everything (not just healthcare services)<br></li>
+<li>The <a href="http://www.dartmouthatlas.org/data/topic/topic.aspx?cat=21">Dartmouth Atlas</a> has been documenting for years the variation across the country, but I wanted to look more closely in my local region<br></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data structure</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Full data set</h3>
+
+<ul>
+<li>9 million rows<br></li>
+<li>Each row corresponds to a procedure performed by a specific provider</li>
+</ul>
+
+<pre><code>##   Provider_Name nppes_provider_city place_of_service hcpcs_code
+## 1 HALL, WILLIAM             RALEIGH     Non-facility      99203
+##                  hcpcs_description line_srvc_cnt
+## 1 Outpatient visit for new patient            26
+##   average_submitted_chrg_amt average_Medicare_payment_amt
+## 1                      210.6                        79.94
+</code></pre>
+
+<h3>Subset of interest</h3>
+
+<ul>
+<li>Individual providers in the Triangle region of North Carolina (Raleigh, Durham, and Chapell Hill)<br></li>
+<li>Eight common procedures<br></li>
+<li>Medicare charges<br></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Interactive web app</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Select a procedure (e.g., Screening Mammogram) and a provider setting (e.g., Facility)<br>
+<img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Background'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Why the triangle region of North Carolina?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data structure'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Interactive web app'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
